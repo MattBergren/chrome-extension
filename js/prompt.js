@@ -20,4 +20,4 @@ if (phoneNumberPattern.test(phoneNumber)) {
 }
 
 // Insert the output into the web page. 
-document.body.innerHTML = output;
+//document.body.innerHTML = output;
