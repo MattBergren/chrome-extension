@@ -13,3 +13,10 @@ var kbValues = {
 	},
 	currentTime: currentDate.getFullYear() + '-' +(currentDate.getMonth() + 1) + '-' +currentDate.getDate() + ' at ' +currentDate.getHours() + ':' +currentDate.getMinutes() + ':' +currentDate.getSeconds()
 };
+
+function getAreaCodes(){
+	var areaCodes = kbValues.areaCodes;
+	return areaCodes;
+}
+
+
