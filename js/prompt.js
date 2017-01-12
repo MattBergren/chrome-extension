@@ -8,6 +8,11 @@ function getUserName(){
 	return userName;
 }
 
+// Validata a phone number
+function validatePhoneNumber(phoneNumber){
+	return phoneNumber.match(/(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/);
+}
+
 // Get the user's phone number
 function getPhoneNumber(userName){
 	var phoneNumber = prompt('Hello ' + userName + ' what\'s your phone number?');
@@ -15,11 +20,6 @@ function getPhoneNumber(userName){
 		phoneNumber = prompt('Please enter a valid phone number.');
 	}
 	return phoneNumber;
-}
-
-// Validata a phone number
-function validatePhoneNumber(phoneNumber){
-	return phoneNumber.match(/(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/);
 }
 
 // Determine location based on phone number
@@ -30,9 +30,9 @@ function getLocation(phoneNumber){
 	var phoneMatches = phoneNumberPattern.exec(phoneNumber);
 	var areaCodes, areaCode, locationName;
 	if (phoneMatches) {
-		var areaCode = phoneMatches[1];
-		var areaCodes = getAreaCodes();
-		var locationName = areaCodes[areaCode];
+		areaCode = phoneMatches[1];
+		areaCodes = getAreaCodes();
+		locationName = areaCodes[areaCode];
 	}
 
 	// Look it's a ternary operator.

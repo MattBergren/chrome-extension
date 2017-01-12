@@ -7,17 +7,17 @@ function getImageWidth(image) {
 }
 
 function replaceImages(images, location){
-	var baseImageUrl, height, width, image;
-	switch (location) {
-		case 'Memphis':
-			// Use puppies for Memphis
-			baseImageUrl = 'http://placepuppy.it';
-			break;
-		default:
-			//use kittens everywhere else
-			baseImageUrl = 'http:placekitten.com/g';
-			break;
-	}
+  var baseImageUrl, height, width, image;
+  switch (location) {
+  case 'Memphis':
+    // Use puppies for Memphis
+    baseImageUrl = 'http://placepuppy.it';
+    break;
+  default:
+    //use kittens everywhere else
+    baseImageUrl = 'http:placekitten.com/g/';
+    break;
+  }
 	for(var i=0, len = images.length; i<len; i++) {
 		image = images[i];
 		height = getImageHeight(image);
