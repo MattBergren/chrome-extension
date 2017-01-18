@@ -10,7 +10,7 @@ function getUserName(){
 
 // Validata a phone number
 function validatePhoneNumber(phoneNumber){
-	return phoneNumber.match(/(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/);
+	return /(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/.test(phoneNumber);
 }
 
 // Get the user's phone number
